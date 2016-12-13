@@ -13,3 +13,12 @@ def read_data(filename):
         if fh is not None:
             fh.close()
     return lines
+    
+    
+def read_data2(filename):
+    try :
+        with open(filename) as fh:
+            for line in fh:
+                process(line)
+    except EnvironmentError as err:
+        print(err)
