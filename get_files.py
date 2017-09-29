@@ -1,5 +1,7 @@
-import os,os.path
-
+import os
+'''
+得到指定目录下的所有文件列表，递归或者不递归
+'''
 def get_files(path,recurse=False):
     files=[]
     if not recurse:
@@ -15,3 +17,8 @@ def get_files(path,recurse=False):
                 files.append(fullname)
         return files   
             
+# x=get_files('D:\Documents\GitHub\python3-practice')
+# with open(x[0]) as f:
+#     result=f.read()
+#     print(x[0])
+#     print(x) 
